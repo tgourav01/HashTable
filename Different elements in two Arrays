@@ -1,0 +1,31 @@
+BRUTE FORCE SOLUTION
+
+https://leetcode.com/problems/find-the-difference-of-two-arrays/
+
+public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
+       ArrayList<Integer> arr1=new ArrayList<>();
+       ArrayList<Integer> arr2=new ArrayList<>();
+       List<Integer> ans1=new ArrayList<>();
+       List<Integer> ans2=new ArrayList<>();
+       List<List<Integer>> ans=new ArrayList<>();
+        for(int i:nums1){
+            arr1.add(i);
+        }
+        for(int j:nums2){
+            arr2.add(j);
+        }
+        for(int k:nums1){
+            if( arr2.contains(k)==false){
+                      if(ans1.contains(k)==false)
+                        ans1.add(k);       
+        }}
+        for(int l:nums2){
+            if( arr1.contains(l)==false){
+                if(ans2.contains(l)==false)
+                    ans2.add(l);
+        }}
+        
+        ans.add(ans1);
+        ans.add(ans2);
+        return ans;
+    }
