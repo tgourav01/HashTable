@@ -1,0 +1,40 @@
+https://practice.geeksforgeeks.org/problems/in-first-but-second5423/1?utm_source=geeksforgeeks&utm_medium=article_practice_tab&utm_campaign=article_practice_tab
+
+HAshSet SOLUTION
+
+class Solution
+{
+    ArrayList<Long> findMissing(long A[], long B[], int N, int M)
+    {
+        ArrayList<Long>arr=new ArrayList<>();
+        HashSet<Long>set=new HashSet<>();
+        
+        for(long i: B){
+            set.add(i);
+        }
+        for(long j:A){
+            if(set.contains(j)==false)
+             arr.add(j);
+            
+        }
+        return arr;
+    }
+}
+
+BRUTE FORCE SOLUTION
+
+ArrayList<Long> findMissing(long A[], long B[], int N, int M)
+    {
+        ArrayList<Long>arr=new ArrayList<>();
+        for(int i=0;i<A.length;i++){
+            for(int j=0;j<=B.length;j++){
+                  
+                if(j==B.length){
+                arr.add(A[i]);
+                break;
+                    }
+                if(A[i]==B[j] )break;
+                }
+            } 
+            return arr;
+        }
